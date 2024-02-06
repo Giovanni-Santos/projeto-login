@@ -6,6 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <main>
@@ -16,8 +17,22 @@
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja Bem-Vindo(a) Novamente! Faca login para acessar sua conta e poder fazer as configuracoes no seu ambiente.</p>
-                <form action="login.php" method="post">
-
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <i class="bi bi-person-fill"></i>
+                        <input type="email" name="login" id="ilogin" placeholder="Seu email" required autocomplete="email" maxlength="30">
+                        <label for="ilogin">Login</label>
+                    </div>
+                    <div class="campo">
+                        <i class="bi bi-key-fill"></i>
+                        <input type="password" name="senha" id="isenha" placeholder="Sua Senha" required autocomplete="current-password" minlength="8" maxlength="20">
+                        <label for="isenha">Senha</label>
+                    </div>
+                    <input type="submit" value="Enviar">
+                    <a href="esqueci.html">
+                        Esqueci a Senha
+                        <i class="bi bi-envelope-fill"></i>
+                    </a>
                 </form>
             </div>
         </section>
